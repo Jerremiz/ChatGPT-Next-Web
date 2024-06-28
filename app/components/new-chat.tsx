@@ -146,7 +146,7 @@ export function NewChat() {
 
       <div className={styles["title"]}>{Locale.NewChat.Title}</div>
       {/* <div className={styles["sub-title"]}>{Locale.NewChat.SubTitle}</div> */}
-      <div className={styles["announcement"]}>{"公告\n由于上游限制调用次数锐减，建议移步新镜像站"}</div>
+      <div className={styles["announcement"]}>{"公告：由于上游限制调用次数锐减，建议移步新镜像站"}</div>
 
       <div className={styles["actions"]}>
         <IconButton

@@ -145,8 +145,8 @@ export function NewChat() {
       </div>
 
       <div className={styles["title"]}>{Locale.NewChat.Title}</div>
-      <div className={styles["sub-title"]}>{Locale.NewChat.SubTitle}</div>
-      <div className={styles["announcement"]}>{"公告：由于上游限制调用次数锐减，建议换到镜像站使用"}</div>
+      {/* <div className={styles["sub-title"]}>{Locale.NewChat.SubTitle}</div> */}
+      <div className={styles["announcement"]}>{"公告\n由于上游限制调用次数锐减，建议移步新镜像站"}</div>
 
       <div className={styles["actions"]}>
         <IconButton
@@ -158,16 +158,17 @@ export function NewChat() {
         />
 
         <IconButton
-          text={"镜像站"}
-          onClick={() => window.open('https://oai.jeremiz.top', '_blank')}
+          text={Locale.NewChat.Skip}
+          onClick={() => startChat()}
+          icon={<LightningIcon />}
           type="primary"
           shadow
           className={styles["skip"]}
         />
 
         <IconButton
-          text={Locale.NewChat.Skip}
-          onClick={() => startChat()}
+          text={"镜像站"}
+          onClick={() => window.open('https://oai.jeremiz.top', '_blank')}
           icon={<LightningIcon />}
           type="primary"
           shadow

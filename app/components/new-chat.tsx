@@ -146,6 +146,7 @@ export function NewChat() {
 
       <div className={styles["title"]}>{Locale.NewChat.Title}</div>
       <div className={styles["sub-title"]}>{Locale.NewChat.SubTitle}</div>
+      <div className={styles["announcement"]}>{"公告：由于上游限制调用次数锐减，建议换到镜像站使用"}</div>
 
       <div className={styles["actions"]}>
         <IconButton
@@ -154,6 +155,14 @@ export function NewChat() {
           icon={<EyeIcon />}
           bordered
           shadow
+        />
+
+        <IconButton
+          text={"镜像站"}
+          onClick={() => window.open('https://oai.jeremiz.top', '_blank')}
+          type="primary"
+          shadow
+          className={styles["skip"]}
         />
 
         <IconButton
